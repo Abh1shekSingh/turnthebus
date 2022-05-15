@@ -1,0 +1,755 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    overflow-x: hidden;
+    background-color: rgb(245, 244, 244);
+}
+
+/* HEADER CODE */
+.Header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #fff;
+    /* box-shadow: 1px 1px 10px gray; */
+    border-bottom: 1px solid #3A438A;
+    padding:0.5em 3em;
+    font-family: 'poppins';
+}
+.Header__items .logo img{
+    width: 100px;
+}
+.item p{
+    font-family: 'Roboto';
+    color: #3A438A;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+#drpdownBtn{
+    cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+/* TRIAL */
+.Header__items .item{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: -19em;
+}
+
+.loginCredential{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header__items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* FOOTER STYLING DOING HERE */
+
+.Footer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    top: 5vh;
+    padding: 1em;
+   
+}
+
+.footerLinks ul{
+    display: flex;
+    gap: 1em;
+    margin: 1em auto;
+}
+.footerinclude{
+    position: relative;
+    top: 150%;
+}
+
+.copyright p:nth-child(1){
+    color: grey;
+    font-size: 12px;
+}
+.copyright p:nth-child(2){
+    font-size: 12px;
+    color: rgb(84, 84, 180);
+
+}
+.copyright a{
+    cursor: pointer;
+}
+.copyright a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+.navigation::-webkit-scrollbar {
+    width: .3em;
+  }
+   
+.navigation::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+.navigation::-webkit-scrollbar-thumb {
+    background-color: rgb(236, 232, 232);
+    outline: 1px solid rgb(230, 230, 230);
+  }
+.container{
+    position: relative;
+    width: 100%;
+    top: 4em;
+    height: 100vh;
+}
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 80%;
+    transition: .5s;
+    overflow: hidden;
+    background-color: #fdfdfd;
+    overflow-y: scroll;
+}
+.submitbtn{
+    padding: .5em;
+    font-size: 15px;
+    margin: 1em 0;
+}
+.navigation.active{
+    width: 0px;
+}
+li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    padding: .5em 2em;
+    font-size: 15px;
+}
+
+.navigation ul li:nth-child(1){
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    padding: 1em 2em;
+}
+
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    transition: .5s;
+}
+.main.active{
+    width: 100%;
+    left: 0px;
+}
+
+.main .topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.main .topbar .dashboardName{
+    font-family: "Roboto",sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.toggle::before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: black;
+}
+
+
+.cardBox{
+    position: relative;
+    width: 100%;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    
+}
+
+.cardBox .card{
+    position: relative;
+    background-color: #fdfdfd;
+    padding: 20px;
+    height: 8em;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    /* border: 2px solid #D8D8D8; */
+    box-shadow: 0 0 50px #cccccccc;
+}
+.cardBox .card:hover{
+    background-color: #f3f3f3;
+}
+
+.CardData{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.cardBox .card .cardNumber{
+    position: relative;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.cardBox .card .cardTitle{
+    font-size: 15px;
+    color: grey;
+}
+
+.charts{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    
+}
+
+.charts .middleLeft{
+    position: relative;
+    margin-right: 1em;
+}
+
+
+.scatterChartHeading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.scatterChartHeading .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}
+
+.ScatterChartArea{
+    position: relative;
+    padding: 1em;
+    /* width: 785px; */
+    border-radius: 5px;
+    min-height: 400px;
+    background-color: #fdfdfd;
+    /* border: 2px solid #D8D8D8; */
+    box-shadow: 0 0 50px #cccccccc;
+}
+
+#ScatterChart{
+    position: relative;
+    margin: 1em 0;
+    width: 100%;
+    height: 60vh;
+}
+
+#FunnelChart,#DoughnutChart{
+    position: relative;
+    width: 100%;
+    height: 64.5vh;
+}
+
+#DoughnutChart{
+    transform: scale(1.05);
+}
+
+.activities{
+    margin: 0em 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 1em;
+}
+
+.activities .userActivity{
+    background-color: #fdfdfd;
+    position: relative;
+    padding: 2em 2em;
+    height: 15em;
+    border-radius: 5px;
+    /* border: 2px solid #D8D8D8; */
+    box-shadow: 0 0 50px #cccccccc;
+}
+
+.activities .quizCompleted{
+    position: relative;
+    background-color: #fdfdfd;
+    padding: 2em 2em;
+    height: 15em;
+    border-radius: 5px;
+    /* border: 2px solid #D8D8D8; */
+    box-shadow: 0 0 50px #cccccccc;
+}
+
+.middleRight{
+    position: relative;
+    display: grid;
+    grid-gap: 1em;
+
+}
+
+.middleRight .funnelChart{
+    position: relative;
+    padding: 1em;
+    /* width: 430px; */
+    background-color: #fdfdfd;
+    /* border: 2px solid #D8D8D8; */
+    box-shadow: 0 0 50px #cccccccc;
+    border-radius: 5px;
+}
+
+.middleRight .doughnutChart{
+    position: relative;
+    padding: 1em;
+    /* width: 430px; */
+    background-color: #fdfdfd;
+    /* border: 2px solid #D8D8D8; */
+    box-shadow: 0 0 50px #cccccccc;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width:768px){
+    .middleRight{
+        width: ;
+        margin-top: 1em;
+    }
+    .middleRight .funnelChart{
+        width:465px;
+    }
+    .middleRight .doughnutChart{
+        width: 465px;
+    }
+    .ScatterChartArea{
+        max-width: 465px;
+    }
+    
+    .middleLeft{
+        width: 355px;
+    }
+    .table{
+        width:100% ;
+        padding: 0 0em ;
+    }
+    .Header__items{
+        display: flex;
+    }
+    .Header__items .item{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        left: 0em;
+    }
+
+
+}
+@media only screen and (max-width:475px){
+    .middleRight{
+        width: 50px;
+    }
+}
+
+
+.funnelChartHeading,.doughnutChartHeading{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: .5em;
+}
+
+.activities .userActivity .userActivityHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activities .quizCompleted .quizHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:1.5em ;
+}
+.quizHeading p{
+    font-family: 'Roboto',san-serif;
+    font-size: 20px;
+}
+
+.userActivityHeading p{
+    font-family: 'Roboto',san-serif;
+    font-size: 20px;
+}
+
+.activityData{
+    position: relative;
+    margin: 2em 0;
+}
+
+.table{
+    margin-left: auto;
+    margin-right: auto;
+    width:130% ;
+    padding: 0 2em ;
+}
+.table tr td{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+}
+#progressMonth {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+
+.scatterChartHeading p{
+    font-weight: 700;
+}
+.userActivityHeading p{
+    font-weight: 700;
+}
+.quizHeading p{
+    font-weight: 700;
+}
+.doughnutChartHeading p{
+    font-weight: 700;
+}
+.funnelChartHeading p{
+    font-weight: 700;
+}
+.fa-arrow-up{
+    color: greenyellow;
+}
+.fa-arrow-down{
+    color: orangered;
+}
+
+td{
+    width: 150px;
+    font-family: "Roboto",sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+td:nth-child(3){
+    color: grey;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.progressBarsContainer{
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-gap: 1em;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 3em;
+    margin: 2em 0;
+}
+
+.monthWiseProgress{
+    display: flex;
+    justify-content: space-between;
+}
+
+#barContainer{
+    width: 100%;
+    border-radius: 100px;
+  background-color: #EFF3F9;
+}
+
+#firstBar{
+        width: 94%;
+        height: 10px;
+        border-radius: 100px;
+        background-color: #44B7EE;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+}
+#secondBar{
+    width: 20%;
+    height: 10px;
+    border-radius: 100px;
+    background-color: #44B7EE;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+#thirdBar{
+    width: 20%;
+    height: 10px;
+    border-radius: 100px;
+    background-color: #44B7EE;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+#fourthBar{
+    width: 20%;
+    height: 10px;
+    border-radius: 100px;
+    background-color: #44B7EE;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+.items{
+    margin: 1em;
+    border: 1.5px solid #ffd012;
+    background-color: #ffd012;
+    color: white;
+    padding: .1em .6em;
+    cursor: pointer;
+}
+
+
+
+
+/* INPUT FIELDS CSS */
+
+input,select{
+    padding: 5px;
+    box-sizing: border-box;
+    margin: .5em 0;
+}
+
+input:focus,  select:focus{
+    outline: none;
+}
+
+
+
+/* RESPONSIVE CODE FROM HERE */
+
+@media (max-width:992px){
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        left: 0;
+        width: 300px;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        width: calc(100%-300px);
+        left: 300px;
+    }
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:786px){
+    .charts{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .activities{
+        display: flex;
+        flex-direction: column;
+    }
+    .item{
+        position: absolute;
+        
+    }
+
+}
+
+
+
+/* REPORT 6 CSS STYLING STARTS HERE */
+
+
+.tagpills p {
+     display: flex;
+     gap: 1em;
+    border: 1px solid #3A438A;
+
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+  min-width: 360px;
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+.highcharts-data-table table {
+  font-family: "Roboto", sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+
+.Report6chart{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lineChartContainer{
+    border: 1px solid grey;
+    background-color: #fff;
+    
+    box-shadow: 0 0 50px #ccc;
+    border-radius: 20px;
+    width: 85%;
+    margin: 1em 0;
+    padding: .5em;
+}
+
+.filterSubmitBtn{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    bottom: 12px;
+    height: 10%;
+    background-color: #fff;
+
+}
+
+.dashboardName span{
+    color: rgb(65, 65, 187);
+}
+#blockInputFeild{
+    display: none;
+}
+#block{
+    width: 100%;
+}
+
+.filterSubmitBtn button{
+    width: 70%;
+    margin: 0 auto;
+    border: none;
+    color: white;
+    font-size: 16px;
+    box-shadow: 5px 10px 10px #ccc;
+    cursor: pointer;
+    background-color: #3A438A ;
+    transition: 0.5s;
+    font-family: 'Roboto';
+    font-weight: 600;
+}
+button:hover{
+    transform: translateY(-0.5em);
+}

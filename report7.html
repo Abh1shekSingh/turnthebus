@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+     <!-- ICONS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- GOOGLE FONTS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+     
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> 
+    
+     
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+     
+    <script src="JS/w3data.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <div class="container">
+        <div w3-include-html="navigation.html" class="nav"></div> 
+
+        <div class="main">
+            <!-- <div class="upper_header">
+                <p>Reports > <span>Time Spent On Videos</span></p>
+            </div> -->
+            <div class="topbar">
+                <div class="toggle" onclick=toggleMenu();></div>
+                <p class="dashboardName">Reports > <span>Quiz Attempted and Completions</span> </p>
+            </div>
+            
+            <div class="filterTags">
+                <div class="tagpills">
+                    
+                </div>
+                
+            </div>
+
+            <div class="Report6chart">
+                <div class="lineChartContainer">
+                    <figure class="highcharts-figure">
+                        <div id="containers"></div>
+                        <!-- <p class="highcharts-description">
+                          Basic line chart showing trends in a dataset. This chart includes the
+                          <code>series-label</code> module, which adds a label to each line for
+                          enhanced readability.
+                        </p> -->
+                      </figure>
+                </div>
+               
+            </div>
+
+        </div>
+        
+
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="JS/report7.js"></script>
+    <script src="JS/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- JQUERY CDN -->
+    <script src="JS/w3data.js"></script>
+    <script " src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <!-- HIGHCHART CDN -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/cylinder.js"></script>
+    <script src="https://code.highcharts.com/modules/funnel3d.js"></script>
+    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+
+    
+    
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- OUR OWN STYLE SHEET -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> 
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Turn The Bus</title>
+</head>
+<body>
+   
+
+    <div class="Header">
+        <div class="Header__items">
+            <div class="logo">
+                <img src="assets//logo.png" alt="" />
+            </div>
+            <div class="item" style="display: flex; gap:2em;">
+                <p>Dashboard</p>
+                <div class="dropdown">
+                    <p id="drpdownBtn" >Report <i class="fa-solid fa-caret-down"></i></p>
+                    <div id="myDropdown" class="dropdown-content ">
+                        <a href="report1.html">Report 1</a>
+                        <a href="report2.html">Report 2</a>
+                        <a href="report3a.html">Report 3a</a>
+                        <a href="report3b.html">Report 3b</a>
+                        <a href="report4.html">Report 4</a>
+                        <a href="report5.html">Report 5</a>
+                        <a href="report6.html">Report 6</a>
+                        <a href="report7.html">Report 7</a>
+                        <a href="report8.html">Report 8</a>
+                    </div>
+                </div>
+            </div>
+            <div class="loginCredential">
+                
+                <div class="user">
+                    <img src="assets/avatar.png" alt=""/>
+                    <p>User</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="container">
+    
+        <div w3-include-html="navigation.html">
+        </div> 
+        
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick=toggleMenu();></div>
+                <span class="dashboardName">Dashboard</span>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                     <div class="CardData">
+                         <div class="cardTitle">Total Users</div>
+                         <div class="cardNumber" id="totaluser">13,675</div>
+                     </div>
+                     <div class="cardIcon">
+                        <i class="fa-regular fa-user"></i>
+                     </div>
+                </div>
+
+                <div class="card">
+                    <div class="CardData">
+                        <div class="cardTitle">Course Available</div>
+                        <div class="cardNumber" id="courseAvail">1,986</div>
+                    </div>
+                    <div class="cardIcon">
+                        <i class="fa-regular fa-note-sticky"></i>
+                    </div>
+               </div>
+
+               <div class="card">
+                     <div class="CardData">
+                         <div class="cardTitle">Course Enrolled</div>
+                         <div class="cardNumber" id="enrolled">890</div>
+                     </div>
+                     <div class="cardIcon">
+                        <i class="fa-regular fa-thumbs-up"></i>
+                     </div>
+                </div>
+
+                <div class="card">
+                     <div class="CardData">
+                         <div class="cardTitle">Video Hours Spent</div>
+                         <div class="cardNumber" id="hoursSpent">700</div>
+                     </div>
+                     <div class="cardIcon">
+                        <i class="fa-regular fa-circle-check"></i>
+                     </div>
+                </div>
+
+            </div>
+            
+            <div class="charts upperChartHolder">
+                <div class="middleLeft">
+                    <div class="ScatterChartArea">
+                        <div class="scatterChartHeading">
+                            <div class="title">
+                            </div>
+                        </div>
+                        
+                        <div id="ScatterChart">
+                            
+                        </div> 
+                        
+                    </div>
+
+                </div>
+
+                <div class="middleRight">
+
+                    <div class="funnelChart">
+                        <div class="funnelChartHeading">
+                           
+                        </div>
+                        <div id="FunnelChart">
+                            
+                        </div> 
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="charts lowerChartHolders">
+                <div class="middleLeft">
+                                      
+                    <div class="activities">
+                        <div class="userActivity">
+                            <div class="userActivityHeading">
+                                <p>User Login/Active Users</p>
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </div>
+                            <div class="activityData">
+                                <table class="table">
+                                    <tr>
+                                      <td>January</td>
+                                      <td id="numberofuser1">270</td>
+                                      <td>+ 0.7% <i class="fa-solid fa-arrow-up"></i></td>
+                                    </tr>
+                                    <tr>
+                                      <td>December</td>
+                                      <td id="numberofuser2">170</td>
+                                      <td>- 0.9% <i class="fa-solid fa-arrow-down"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>November</td>
+                                        <td id="numberofuser3">230</td>
+                                        <td>+ 1.4% <i class="fa-solid fa-arrow-up"></i></td>
+                                    </tr>
+                                  </table>
+                                  
+                            </div>
+                            
+                        </div>
+                        <div class="quizCompleted">
+                            <div class="quizHeading">
+                                <p>Quiz Completion</p>
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </div>
+                            <div class="progressBarsContainer">
+                                <div class="progress1">
+                                    <div class="monthWiseProgress">
+                                        <span id="progressMonth">April</span>
+                                        <span id="progressPercentage1"></span>
+                                    </div>
+                                    <div id="barContainer">
+                                        <div id="firstBar"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress1">
+                                    <div class="monthWiseProgress">
+                                        <span id="progressMonth">March</span>
+                                        <span id="progressPercentage2"></span>
+                                    </div>
+                                    <div id="barContainer">
+                                        <div id="secondBar"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress1">
+                                    <div class="monthWiseProgress">
+                                        <span id="progressMonth">February</span>
+                                        <span id="progressPercentage3"></span>
+                                    </div>
+                                    <div id="barContainer">
+                                        <div id="thirdBar"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress1">
+                                    <div class="monthWiseProgress">
+                                        <span id="progressMonth">January</span>
+                                        <span id="progressPercentage4"></span>
+                                    </div>
+                                    <div id="barContainer">
+                                        <div id="fourthBar"></div>
+                                    </div>
+                                </div>
+                                
+
+                               
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="middleRight">
+
+                    <div class="doughnutChart">
+                        <div class="doughnutChartHeading">
+                        </div>
+                        <div id="DoughnutChart">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div w3-include-html="footer.html" class="footerinclude"></div>
+
+        </div>
+
+        
+
+    </div>
+
+    
+
+    <!-- CUSTOM JS -->
+    <script src="JS/index.js" ></script>
+    <script src="JS/common.js"></script>
+    <!-- JQUERY CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>  
+    
+    
+</body>
+
+
+</html>

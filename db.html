@@ -1,0 +1,1112 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+<head dir="ltr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  
+      <title>
+       TTB Analytics | Your Platform Name Here
+      </title>
+  
+
+      <script type="text/javascript">
+        /* immediately break out of an iframe if coming from the marketing website */
+        (function(window) {
+          if (window.location !== window.top.location) {
+            window.top.location = window.location;
+          }
+        })(this);
+      </script>
+
+  
+
+  <script type="text/javascript" src="/static/js/i18n/en/djangojs.js"></script>
+  <script type="text/javascript" src="/static/js/ie11_find_array.js"></script>
+  
+  <link rel="icon" type="image/x-icon" href="/static/turnthebus-edx-theme/images/favicon.ico"/>
+
+
+
+  
+  
+
+      <link rel="stylesheet" href="/static/css/vendor/font-awesome.css" type="text/css" media="all" / >
+      <link rel="stylesheet" href="/static/css/vendor/jquery.qtip.min.css" type="text/css" media="all" / >
+
+    
+  
+
+      <link rel="stylesheet" href="/static/turnthebus-edx-theme/css/lms-main-v1.css" type="text/css" media="all" / >
+
+
+    
+      <script type="text/javascript" src="/static/common/js/vendor/jquery.js"></script>
+      <script type="text/javascript" src="/static/common/js/vendor/jquery-migrate.js"></script>
+      <script type="text/javascript" src="/static/js/vendor/jquery.cookie.js"></script>
+      <script type="text/javascript" src="/static/js/vendor/url.min.js"></script>
+      <script type="text/javascript" src="/static/common/js/vendor/underscore.js"></script>
+      <script type="text/javascript" src="/static/common/js/vendor/underscore.string.js"></script>
+      <script type="text/javascript" src="/static/common/js/vendor/picturefill.js"></script>
+      <script type="text/javascript" src="/static/edx-ui-toolkit/js/utils/global-loader.js"></script>
+      <script type="text/javascript" src="/static/edx-ui-toolkit/js/utils/string-utils.js"></script>
+      <script type="text/javascript" src="/static/edx-ui-toolkit/js/utils/html-utils.js"></script>
+      <script type="text/javascript" src="/static/common/js/vendor/require.js"></script>
+      <script type="text/javascript" src="/static/js/RequireJS-namespace-undefine.js"></script>
+      <script type="text/javascript" src="/static/js/vendor/URI.min.js"></script>
+      <script type="text/javascript" src="/static/common/js/vendor/backbone.js"></script>
+      <script type="text/javascript" src="/static/js/vendor/json2.js"></script>
+      <script type="text/javascript" src="/static/js/vendor/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="/static/js/vendor/jquery.qtip.min.js"></script>
+      <script type="text/javascript" src="/static/js/vendor/jquery.ba-bbq.min.js"></script>
+
+    
+      <script type="text/javascript" src="/static/js/src/ajax_prefix.js"></script>
+      <script type="text/javascript" src="/static/js/src/jquery.immediateDescendents.js"></script>
+      <script type="text/javascript" src="/static/js/src/xproblem.js"></script>
+      <script type="text/javascript" src="/static/common/js/xblock/core.js"></script>
+      <script type="text/javascript" src="/static/common/js/xblock/runtime.v1.js"></script>
+      <script type="text/javascript" src="/static/lms/js/xblock/lms.runtime.v1.js"></script>
+      <script type="text/javascript" src="/static/js/src/utility.js"></script>
+      <script type="text/javascript" src="/static/js/src/logger.js"></script>
+      <script type="text/javascript" src="/static/js/user_dropdown_v1.js"></script>
+      <script type="text/javascript" src="/static/js/dialog_tab_controls.js"></script>
+      <script type="text/javascript" src="/static/js/src/string_utils.js"></script>
+      <script type="text/javascript" src="/static/js/form.ext.js"></script>
+      <script type="text/javascript" src="/static/js/src/ie_shim.js"></script>
+      <script type="text/javascript" src="/static/js/src/accessibility_tools.js"></script>
+      <script type="text/javascript" src="/static/js/toggle_login_modal.js"></script>
+      <script type="text/javascript" src="/static/js/src/lang_edx.js"></script>
+      <script type="text/javascript" src="/static/js/calculator.js"></script>
+      <script type="text/javascript" src="/static/js/feedback_form.js"></script>
+      <script type="text/javascript" src="/static/js/main.js"></script>
+      <script type="text/javascript" src="/static/js/sticky_filter.js"></script>
+      <script type="text/javascript" src="/static/js/query-params.js"></script>
+      <script type="text/javascript" src="/static/common/js/vendor/moment-with-locales.js"></script>
+      <script type="text/javascript" src="/static/common/js/vendor/moment-timezone-with-data.js"></script>
+
+
+  
+    
+    
+    <script type="text/javascript" src="/static/bundles/commons.js" ></script>
+
+
+
+  <script>
+    window.baseUrl = "/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="/static/lms/js/require-config.js"></script>
+  
+    <script type="text/javascript">
+        (function (require) {
+          require.config({
+              paths: {
+                'course_bookmarks/js/views/bookmark_button': 'course_bookmarks/js/views/bookmark_button',
+'js/views/message_banner': 'js/views/message_banner',
+'moment': 'common/js/vendor/moment-with-locales',
+'moment-timezone': 'common/js/vendor/moment-timezone-with-data',
+'js/courseware/course_info_events': 'js/courseware/course_info_events',
+'js/courseware/accordion_events': 'js/courseware/accordion_events',
+'js/dateutil_factory': 'js/dateutil_factory',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory',
+'js/courseware/courseware_factory': 'js/courseware/courseware_factory',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory',
+'js/groups/discussions_management/discussions_dashboard_factory': 'js/discussions_management/views/discussions_dashboard_factory',
+'draggabilly': 'js/vendor/draggabilly',
+'hls': 'common/js/vendor/hls'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+  
+
+  
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- OUR OWN STYLE SHEET -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/static/js/w3data.js"></script>
+
+  
+
+  
+
+
+  
+
+
+<script type="application/json" id="user-metadata">
+    null
+</script>
+
+  
+
+  
+
+
+  
+
+
+<!-- dummy Segment -->
+<script type="text/javascript">
+  var analytics = {
+    track: function() { return; },
+    trackLink: function() { return; },
+    pageview: function() { return; },
+    page: function() { return; }
+  };
+</script>
+<!-- end dummy Segment -->
+
+
+  <meta name="path_prefix" content="">
+  
+
+  <meta name="openedx-release-line" content="master" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/static/turnthebus-edx-theme/css/style.css">
+</head>
+
+<body class="ltr  lang_en">
+
+
+<div id="page-prompt"></div>
+  <div class="window-wrap" dir="ltr">
+    
+    <a class="nav-skip sr-only sr-only-focusable" href="#main">Skip to main content</a>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="global-header ">
+    <div class="main-header">
+        
+
+
+
+
+
+
+
+<h1 class="header-logo">
+    <a href="/dashboard">
+      
+        <img  class="logo" src="/static/turnthebus-edx-theme/images/logo.png" alt="Your Platform Name Here Home Page"/>
+      
+    </a>
+</h1>
+
+        <div class="hamburger-menu" role="button" aria-label=Options Menu aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+            
+
+
+
+
+
+
+
+
+<div class="nav-links">
+  <div class="main">
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+          <a class="tab-nav-link discover-new-link" href="/courses"
+             aria-current="false">
+             Discover New
+          </a>
+      </div>
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+          <a class="tab-nav-link analytics-link" href="/ttb/analytics/">Analytics</a>
+      </div>
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+          <a class="tab-nav-link reports-link" href="#">Reports</a>
+      </div>
+  </div>
+  <div class="secondary">
+      <div class="mobile-nav-item hidden-mobile nav-item">
+        <a class="help-link" href="http://edx.readthedocs.io/projects/open-edx-learner-guide/en/latest/index.html" rel="noopener" target="_blank">Help</a>
+      </div>
+    
+
+
+
+
+
+
+<div class="nav-item hidden-mobile">
+    <a href="/dashboard" class="menu-title">
+        <img data-hj-suppress class="user-image-frame" src="/static/images/profiles/default_50.png" alt="">
+        <span class="sr-only">Dashboard for:</span>
+        <span data-hj-suppress class="username">edx</span>
+    </a>
+</div>
+<div class="nav-item hidden-mobile nav-item-dropdown" tabindex="-1">
+    <div class="toggle-user-dropdown" role="button" aria-label=Options Menu aria-expanded="false" tabindex="0" aria-controls="user-menu">
+        <span class="fa fa-caret-down" aria-hidden="true"></span>
+    </div>
+    <div class="dropdown-user-menu hidden" aria-label=More Options role="menu" id="user-menu" tabindex="-1">
+            <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="/dashboard" role="menuitem">Dashboard</a></div>
+
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="/u/edx" role="menuitem">Profile</a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="/account/settings" role="menuitem">Account</a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="/logout" role="menuitem">Sign Out</a></div>
+    </div>
+</div>
+
+  </div>
+</div>
+
+    </div>
+    <div class="mobile-menu hidden" aria-label=More Options role="menu" id="mobile-menu"></div>
+</header>
+
+
+
+    
+
+
+        
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <div class="marketing-hero"></div>
+
+    <div class="content-wrapper main-container" id="content" dir="ltr">
+      
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="navigation">
+    <ul>
+        <li>
+            <span style="font-size: 18px;">Filter</span>
+            <span style="font-size: 12px; color:orange"">Clear all(2)</span>
+        </li>
+        <li>
+            <span>Date</span>
+            <div id="reportrange" style="background: #fff; font-size: 14px; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                <i class="fa fa-calendar"></i>&nbsp;
+                <span></span> 
+            </div>
+        </li>
+        <li>
+            <span>Class</span>
+            <select name="class" id="class">
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>UG</option>
+                <option>PG</option>
+                <option>Other</option>
+            </select>
+        </li>
+        <li>
+            <span>Subject</span>
+            <select name="subject" id="subject">
+                <option>Math</option>
+                <option>English</option>
+                <option>Geography</option>
+                <option>Economics</option>
+                <option>Sociology</option>
+            </select>
+        </li>
+        <li>
+            <span>Gender</span>
+            <select name="gender" id="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Prefer not to say</option>
+            </select>
+        </li>
+        <li>
+            <span>Min Age</span>
+            <input name="minAge" id="minAge" type="text" placeholder="Enter Minimum Age">
+        </li>
+        <li>
+            <span>Max Age</span>
+            <input name="maxAge" id="maxAge" type="text" placeholder="Enter Maximum Age">
+        </li>
+        <li>
+            <span>Country</span>
+            <select name="country" id="country">
+                <option>India</option>
+            </select>
+        </li>
+        <li >
+            <span>State</span>
+            <select name="state" id="state">
+                
+            </select>
+        </li>
+        <li>
+            <span>City</span>
+            <select name="city" id="city">
+                <option>Select City</option>
+            </select>
+        </li>
+        <li>
+            <span>Block</span>
+            <select name="block" id="block">
+                <option>Block 1</option>
+            </select>
+        </li>
+       
+    </ul>
+    <div class="filterSubmitBtn">
+        <button name="submitbtn" type="submit" class="submitbtn" id="submitbtn" onclick=getInputFieldsData();>Filter</button>
+    </div>
+</div>
+
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle" onclick=toggleMenu();></div>
+            <span class="dashboardName">Dashboard</span>
+        </div>
+
+        <div class="cardBox">
+            <div class="card">
+                 <div>
+                     <div class="cardTitle">Total Users</div>
+                     <div class="cardNumber" id="totaluser">19</div>
+                 </div>
+                 <div class="cardIcon">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                 </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="cardTitle">Course Available</div>
+                    <div class="cardNumber" id="courseAvail">3</div>
+                </div>
+                <div class="cardIcon">
+                    <i class="fa fa-file" aria-hidden="true"></i>
+                </div>
+           </div>
+
+           <div class="card">
+                 <div>
+                     <div class="cardTitle">Course Enrolled</div>
+                     <div class="cardNumber" id="enrolled">6</div>
+                 </div>
+                 <div class="cardIcon">
+                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                 </div>
+            </div>
+
+            <div class="card">
+                 <div>
+                     <div class="cardTitle">Video Hours Spent</div>
+                     <div class="cardNumber" id="hoursSpent">700</div>
+                 </div>
+                 <div class="cardIcon">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                 </div>
+            </div>
+
+        </div>
+        
+        <div class="charts">
+            <div class="middleLeft">
+                <div class="ScatterChartArea">
+                    <div class="scatterChartHeading">
+                        <div class="title">
+                            <p>User Registration Date Wise</p>
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="moreicon">
+                            <i class="fa fa-tasks" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    
+                    <div id="ScatterChart">       
+                    </div> 
+                    
+                </div>
+
+                <div class="activities">
+                    <div class="userActivity">
+                        <div class="userActivityHeading">
+                            <p>User Login/Active Users</p>
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="activityData">
+                            <table class="table">
+                                <tr>
+                                  <td>January</td>
+                                  <td id="numberofuser1">270</td>
+                                  <td>+ 0.7% <i class="fa-solid fa-arrow-up"></i></td>
+                                </tr>
+                                <tr>
+                                  <td>December</td>
+                                  <td id="numberofuser2">170</td>
+                                  <td>- 0.9% <i class="fa-solid fa-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>November</td>
+                                    <td id="numberofuser3">230</td>
+                                    <td>+ 1.4% <i class="fa-solid fa-arrow-up"></i></td>
+                                </tr>
+                              </table>
+                        </div>
+                        
+                    </div>
+                    <div class="quizCompleted">
+                        <div class="quizHeading">
+                            <p>Quiz Completion</p>
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="progressBarsContainer">
+                            <div class="progress1">
+                                <div class="monthWiseProgress">
+                                    <span id="progressMonth">April</span>
+                                    <span id="progressPercentage1"></span>
+                                </div>
+                                <div id="barContainer">
+                                    <div id="firstBar"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress1">
+                                <div class="monthWiseProgress">
+                                    <span id="progressMonth">March</span>
+                                    <span id="progressPercentage2"></span>
+                                </div>
+                                <div id="barContainer">
+                                    <div id="secondBar"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress1">
+                                <div class="monthWiseProgress">
+                                    <span id="progressMonth">February</span>
+                                    <span id="progressPercentage3"></span>
+                                </div>
+                                <div id="barContainer">
+                                    <div id="thirdBar"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress1">
+                                <div class="monthWiseProgress">
+                                    <span id="progressMonth">January</span>
+                                    <span id="progressPercentage4"></span>
+                                </div>
+                                <div id="barContainer">
+                                    <div id="fourthBar"></div>
+                                </div>
+                            </div>
+                            
+
+                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="middleRight">
+                <div class="funnelChart">
+                    <div class="funnelChartHeading">
+                        <p>User Mertic</p>
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    </div>
+                    <div id="funnelChart">
+                    </div> 
+                </div>
+                <div class="doughnutChart">
+                    <div class="doughnutChartHeading">
+                        <p>Registered User Location</p>
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    </div>
+                    <div id="doughnutChart">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+      
+    </div>
+
+        
+
+
+
+
+
+  <div class="wrapper wrapper-footer">
+    <footer id="footer-openedx" class="grid-container"
+    >
+      <div class="colophon">
+        <nav class="nav-colophon" aria-label="About">
+          <ol>
+              <li class="nav-colophon-01">
+                <a id="about" href="/about">About</a>
+              </li>
+              <li class="nav-colophon-02">
+                <a id="blog" href="/blog">Blog</a>
+              </li>
+              <li class="nav-colophon-03">
+                <a id="contact" href="/support/contact_us">Contact</a>
+              </li>
+              <li class="nav-colophon-04">
+                <a id="donate" href="/donate">Donate</a>
+              </li>
+          </ol>
+        </nav>
+
+
+        <div class="wrapper-logo">
+          <p>
+            <a href="/">
+              <img alt="organization logo" src="http://localhost:18000/static/turnthebus-edx-theme/images/logo.png">
+            </a>
+          </p>
+        </div>
+
+          <p class="copyright">© Your Platform Name Here.  All rights reserved except where noted.  edX, Open edX and their respective logos are registered trademarks of edX Inc.
+          </p>
+
+        <nav class="nav-legal" aria-label="Legal">
+          <ul>
+            <li class="nav-legal-01">
+              <a href="/tos">Terms of Service &amp; Honor Code</a>
+            </li>
+            <li class="nav-legal-02">
+              <a href="/privacy">Privacy</a>
+            </li>
+            <li><a href="https://www.edx.org/?utm_medium=affiliate_partner&amp;utm_source=opensource-partner&amp;utm_content=open-edx-partner-footer-link&amp;utm_campaign=open-edx-footer">Take free online courses at edX.org</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-about-openedx">
+        <p>
+          <a href="https://open.edx.org">
+            <img src="https://logos.openedx.org/open-edx-logo-tag.png" alt="Powered by Open edX" width="175" />
+          </a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+
+  </div>
+
+  
+  
+    <script>
+        function toggleMenu(){
+            let toggle = document.querySelector('.toggle');
+            let nav = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active');
+            nav.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+    
+        includeHTML();
+    
+        $(document).ready(function(){
+            $("#date").datepicker({ dateFormat: "yy-mm-dd" });
+            
+        })
+    
+        $('div input').on('click',function(){
+            alert(clicked);
+        })
+
+       
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/static/js/index.js" ></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/cylinder.js"></script>
+    <script src="https://code.highcharts.com/modules/funnel3d.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <script>
+        $.ajax({
+            url: '/ttb/analytics/funnel-chart',
+            dataType: 'json',
+            success: function (data) {
+                Highcharts.chart("funnelChart", data);
+            }
+        });
+
+        $.ajax({
+            url: '/ttb/analytics/scatter-chart',
+            dataType: 'json',
+            success: function (data) {
+                Highcharts.chart("ScatterChart", data);
+            }
+        });
+
+        $.ajax({
+            url: '/ttb/analytics/pie-chart',
+            dataType: 'json',
+            success: function (data) {
+                Highcharts.chart("doughnutChart", data);
+            }
+        });
+    </script>
+
+
+  
+
+
+
+  <script type="text/javascript" src="/static/js/vendor/noreferrer.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/static/js/utils/navigation.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/static/js/header/header.js"></script>
+  
+  <script type="text/javascript" src="/static/js/src/jquery_extend_patch.js"></script>
+  <div id="lean_overlay"></div>
+
+
+
+<link rel="stylesheet" href="/static/debug_toolbar/css/print.css" media="print">
+<link rel="stylesheet" href="/static/debug_toolbar/css/toolbar.css">
+
+
+<script type="module" src="/static/debug_toolbar/js/toolbar.js" async></script>
+
+<div id="djDebug" class="djdt-hidden" dir="ltr"
+     
+     data-store-id="e683da27efed4ba3903637c25b832a1e"
+     data-render-panel-url="/__debug__/render_panel/"
+     
+     data-default-show="true"
+     >
+  <div class="djdt-hidden" id="djDebugToolbar">
+    <ul id="djDebugPanelList">
+      <li><a id="djHideToolBarButton" href="#" title="Hide toolbar">Hide »</a></li>
+      
+        
+
+<li id="djdt-VersionsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtVersionsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Versions" class="VersionsPanel">
+  
+  Versions
+  
+    
+      <br><small>Django 3.2.12</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-TimerPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtTimerPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Time" class="TimerPanel">
+  
+  Time
+  
+    
+      <br><small>CPU: 265.14ms (268.82ms)</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SettingsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSettingsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Settings from lms.envs.devstack_docker" class="SettingsPanel">
+  
+  Settings
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-HeadersPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtHeadersPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Headers" class="HeadersPanel">
+  
+  Headers
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-RequestPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtRequestPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Request" class="RequestPanel">
+  
+  Request
+  
+    
+      <br><small>analytics_index_view</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SQLPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSQLPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="SQL queries from 1 connection" class="SQLPanel">
+  
+  SQL
+  
+    
+      <br><small>5 queries in 2.86ms</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SignalsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSignalsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Signals" class="SignalsPanel">
+  
+  Signals
+  
+    
+      <br><small>371 receivers of 15 signals</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-LoggingPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtLoggingPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Log messages" class="LoggingPanel">
+  
+  Logging
+  
+    
+      <br><small>0 messages</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-HistoryPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtHistoryPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="History" class="HistoryPanel">
+  
+  History
+  
+    
+      <br><small>/ttb/analytics/</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+    </ul>
+  </div>
+  <div class="djdt-hidden" id="djDebugToolbarHandle">
+    <div title="Show toolbar" id="djShowToolBarButton">
+      <span id="djShowToolBarD">D</span><span id="djShowToolBarJ">J</span>DT
+    </div>
+  </div>
+
+  
+    
+
+
+  <div id="VersionsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <button type="button" class="djDebugClose">×</button>
+      <h3>Versions</h3>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="TimerPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <button type="button" class="djDebugClose">×</button>
+      <h3>Time</h3>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SettingsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <button type="button" class="djDebugClose">×</button>
+      <h3>Settings from lms.envs.devstack_docker</h3>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="HeadersPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <button type="button" class="djDebugClose">×</button>
+      <h3>Headers</h3>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="RequestPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <button type="button" class="djDebugClose">×</button>
+      <h3>Request</h3>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SQLPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <button type="button" class="djDebugClose">×</button>
+      <h3>SQL queries from 1 connection</h3>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SignalsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <button type="button" class="djDebugClose">×</button>
+      <h3>Signals</h3>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="LoggingPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <button type="button" class="djDebugClose">×</button>
+      <h3>Log messages</h3>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="HistoryPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <button type="button" class="djDebugClose">×</button>
+      <h3>History</h3>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+  <div id="djDebugWindow" class="djdt-panelContent djdt-hidden"></div>
+</div>
+</body>
+</html>
+
