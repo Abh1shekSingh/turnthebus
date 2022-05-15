@@ -193,6 +193,11 @@ body{
   .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
+
+  .User{
+      display: flex;
+      align-items: center;
+  }
   
   /* 48em = 768px */
   
