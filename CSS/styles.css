@@ -7,6 +7,9 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
+html{
+    overflow-x: hidden;
+}
 body{
     overflow-x: hidden;
     background-color: rgb(245, 244, 244);
@@ -22,6 +25,18 @@ body{
     border-bottom: 1px solid #3A438A;
     padding:0.5em 3em;
     font-family: 'poppins';
+}
+.Header__items .logo {
+    display: flex;
+    gap: 9em;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.nav__link{
+    display: flex;
+    gap: 1em;
 }
 .Header__items .logo img{
     width: 100px;
@@ -66,12 +81,7 @@ body{
 
 
 /* TRIAL */
-.Header__items .item{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    left: -19em;
-}
+
 
 .loginCredential{
     display: flex;
@@ -418,12 +428,16 @@ li{
     }
     .Header__items{
         display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
     }
-    .Header__items .item{
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        left: 0em;
+    .logo{
+        flex-direction: column;
+    }
+
+    .Header__items .logo{
+        gap: 1em;
     }
 
 
