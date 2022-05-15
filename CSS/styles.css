@@ -381,13 +381,12 @@ li{
     position: relative;
     display: inline-block;
     grid-gap: 1em;
-    width: 20px;
+    width: 500px;
 
 }
 
 .middleRight .funnelChart{
     position: relative;
-    display: block;
     padding: 1em;
     /* width: 430px; */
     background-color: #fdfdfd;
@@ -408,7 +407,7 @@ li{
 
 @media only screen and (max-width:768px){
     .middleRight{
-        width: ;
+        width: 20px;
         margin-top: 1em;
     }
     .middleRight .funnelChart{
@@ -422,7 +421,7 @@ li{
     }
     
     .middleLeft{
-        width: 350px;
+        width: 355px;
     }
     .table{
         width:100% ;
