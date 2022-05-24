@@ -190,10 +190,10 @@ $(document).ready(function(){
           var end = moment();
           
           function cb(start, end) {
-              $('#registeredUserDatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+              $('#registered__User__DatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
           }
           
-          $('#registeredUserDatePicker').daterangepicker({
+          $('#registered__User__DatePicker').daterangepicker({
               startDate: start,
               endDate: end,
               ranges: {
@@ -226,10 +226,10 @@ $(document).ready(function(){
           var end = moment();
           
           function cb(start, end) {
-              $('#coursePipeline span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+              $('#course__Pipeline span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
           }
           
-          $('#coursePipeline').daterangepicker({
+          $('#course__Pipeline').daterangepicker({
               startDate: start,
               endDate: end,
               ranges: {
@@ -259,10 +259,10 @@ $(document).ready(function(){
           var end = moment();
           
           function cb(start, end) {
-              $('#monthlyuserActiveDatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+              $('#monthly__User__Active__DatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
           }
           
-          $('#monthlyuserActiveDatePicker').daterangepicker({
+          $('#monthly__User__Active__DatePicker').daterangepicker({
               startDate: start,
               endDate: end,
               ranges: {
@@ -292,10 +292,10 @@ $(document).ready(function(){
           var end = moment();
           
           function cb(start, end) {
-              $('#quizDatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+              $('#quiz__DatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
           }
           
-          $('#quizDatePicker').daterangepicker({
+          $('#quiz__DatePicker').daterangepicker({
               startDate: start,
               endDate: end,
               ranges: {
@@ -326,10 +326,10 @@ $(document).ready(function(){
           var end = moment();
           
           function cb(start, end) {
-              $('#CardsDatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+              $('#Cards__DatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
           }
           
-          $('#CardsDatePicker').daterangepicker({
+          $('#Cards__DatePicker').daterangepicker({
               startDate: start,
               endDate: end,
               ranges: {

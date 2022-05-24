@@ -257,7 +257,7 @@ Highcharts.chart('FunnelChart', {
       }
     },
     title: {
-      text: 'Course pipeline'
+      text: 'Course Pipeline'
     },
     accessibility: {
       screenReaderSection: {
@@ -305,7 +305,7 @@ function getPieChartData(){
             // width: 350,
         },
         title: {
-            text: 'Registered user by location'
+            text: 'Registered User By Location'
         },
         accessibility: {
             point: {
@@ -350,7 +350,7 @@ function getUserActiveData(){
     Highcharts.chart('activeUser', {
 
         title: {
-            text: 'Monthly active users'
+            text: 'Monthly Active Users'
         },
     
        
@@ -411,7 +411,7 @@ function getQuizCompletionData(){
     Highcharts.chart('QuizCompletetionChart', {
 
         title: {
-            text: 'Quiz progress'
+            text: 'Quiz Progress'
         },
     
         

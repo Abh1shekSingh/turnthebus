@@ -442,7 +442,8 @@ li{
 
 .cardsWrapper{
     background-color: rgba(244, 237, 237, 0.8);
-    margin: 0 .5em;
+    margin: 0 .5em 1em .5em;
+
 }
 .cardsDatePickerArea{
     margin-left: auto;
@@ -545,7 +546,7 @@ li{
 }
 .quizCompletedDatePicker{
     padding: 1em;
-    width: 40%;
+    width: 25%;
 }
 .doughnutChartDatePicker{
     width: 50%;
@@ -605,6 +606,9 @@ li{
     /* border: 2px solid #D8D8D8; */
     box-shadow: 0 0 50px #cccccccc;
     /* border-radius: 5px; */
+}
+.doughnutChart{
+    height: 73vh;
 }
 @media only screen and (max-width:768px){
     .middleRight{
