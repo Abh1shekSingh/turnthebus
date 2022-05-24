@@ -35,25 +35,38 @@
 
 
 
-    <div class="Header">
-        <div class="Header__items">
-            <div class="logo">
-                <img src="assets//logo.png" alt="" />
+    <header class="header">
+        <a href="" class="logo">
+            <img src="/assets/logo.png" width="100px" />
+        </a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <li><a href="index.html">Dashboard</a></li>
+            <li id="drpdownBtn" ><a>Report <i class="fa-solid fa-caret-down"></i></a></li>
+            <div id="myDropdown" class="dropdown-content ">
+                <a href="report1.html">Report 1</a>
+                <a href="report2.html">Report 2</a>
+                <a href="report3a.html">Report 3a</a>
+                <a href="report3b.html">Report 3b</a>
+                <a href="report4.html">Report 4</a>
+                <a href="report5.html">Report 5</a>
+                <a href="report6.html">Report 6</a>
+                <a href="report7.html">Report 7</a>
+                <a href="report8.html">Report 8</a>
             </div>
-            <div class="item" style="display: flex; gap:2em;">
-                <p>Dashboard</p>
-                <p>Report</p>
-            </div>
-            <div class="loginCredential">
-                
-                <div class="user">
-                    <img src="assets/avatar.png" alt=""/>
-                    <p>User</p>
-                </div>
-            </div>
-    
-        </div>
-    </div>
+            <li>
+                <a>
+                    <div class="User">
+                        <img src="/assets//avatar.png">
+                        <span>User</span>
+                    </div>
+                </a>
+            </li>
+            
+        </ul>
+       
+      </header>
     <div class="container">
         
         <div w3-include-html="navigation.html" class="nav"></div> 

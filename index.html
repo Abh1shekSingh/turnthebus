@@ -86,10 +86,18 @@
                 <span class="dashboardName">Dashboard</span>
             </div>
 
+            <div class="cardsWrapper">
+                <div class="cardsDatePickerArea">
+                    <div id="CardsDatePicker" style="background: #fff; font-size: 14px; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                        <i class="fa fa-calendar"></i>&nbsp;
+                        <span></span> 
+                    </div>
+                </div>
+               
             <div class="cardBox">
                 <div class="card">
                      <div class="CardData">
-                         <div class="cardTitle">Total Users</div>
+                         <div class="cardTitle">Registered Users</div>
                          <div class="cardNumber" id="totaluser">13,675</div>
                      </div>
                      <div class="cardIcon">
@@ -99,7 +107,7 @@
 
                 <div class="card">
                     <div class="CardData">
-                        <div class="cardTitle">Course Available</div>
+                        <div class="cardTitle">Course Enrollments</div>
                         <div class="cardNumber" id="courseAvail">1,986</div>
                     </div>
                     <div class="cardIcon">
@@ -109,17 +117,17 @@
 
                <div class="card">
                      <div class="CardData">
-                         <div class="cardTitle">Course Enrolled</div>
+                         <div class="cardTitle">Video Watched(hrs)</div>
                          <div class="cardNumber" id="enrolled">890</div>
                      </div>
                      <div class="cardIcon">
-                        <i class="fa-regular fa-thumbs-up"></i>
+                        <i class="fa-regular fa-clock"></i>
                      </div>
                 </div>
 
                 <div class="card">
                      <div class="CardData">
-                         <div class="cardTitle">Video Hours Spent</div>
+                         <div class="cardTitle">Course Completion</div>
                          <div class="cardNumber" id="hoursSpent">700</div>
                      </div>
                      <div class="cardIcon">
@@ -128,12 +136,17 @@
                 </div>
 
             </div>
+        </div>
             
             <div class="charts upperChartHolder">
                 <div class="middleLeft">
                     <div class="ScatterChartArea">
                         <div class="scatterChartHeading">
                             <div class="title">
+                                <div id="registeredUserDatePicker" style="background: #fff; font-size: 14px; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                                    <i class="fa fa-calendar"></i>&nbsp;
+                                    <span></span> 
+                                </div>
                             </div>
                         </div>
                         
@@ -148,8 +161,11 @@
                 <div class="middleRight">
 
                     <div class="funnelChart">
-                        <div class="funnelChartHeading">
-                           
+                        <div class="funnelChartDatePicker">
+                            <div id="coursePipeline" style="background: #fff; font-size: 14px; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                                <i class="fa fa-calendar"></i>&nbsp;
+                                <span></span> 
+                            </div>
                         </div>
                         <div id="FunnelChart">
                             
@@ -161,7 +177,7 @@
             </div>
 
             <div class="charts lowerChartHolders">
-                <div class="middleLeft">
+                <!-- <div class="middleLeft">
                                       
                     <div class="activities">
                         <div class="userActivity">
@@ -243,12 +259,30 @@
 
                         </div>
                     </div>
+                </div> -->
+                <div class="middleLeft">
+                    <div class="userActiveData">
+                        <div class="activeUserDatePicker">
+                            <div id="monthlyuserActiveDatePicker" style="background: #fff; font-size: 14px; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                                <i class="fa fa-calendar"></i>&nbsp;
+                                <span></span> 
+                            </div>
+                        </div>
+                        <div id="activeUser">
+
+                        </div>
+                    </div>
+                    
                 </div>
 
                 <div class="middleRight">
 
                     <div class="doughnutChart">
-                        <div class="doughnutChartHeading">
+                        <div class="doughnutChartDatePicker">
+                            <div id="registeredUserDatePicker" style="background: #fff; font-size: 14px; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                                <i class="fa fa-calendar"></i>&nbsp;
+                                <span></span> 
+                            </div>
                         </div>
                         <div id="DoughnutChart">
                             
@@ -256,6 +290,21 @@
                     </div>
                 </div>
                 
+            </div>
+            <div class="Quizcharts">
+                
+                    <div class="QuizCompletionArea">
+                        <div class="quizCompletedDatePicker">
+                            <div id="quizDatePicker" style="background: #fff; font-size: 14px; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                                <i class="fa fa-calendar"></i>&nbsp;
+                                <span></span> 
+                            </div>
+                        </div>
+                        
+                        <div id="QuizCompletetionChart">
+                            
+                        </div> 
+                    </div>                
             </div>
             <div w3-include-html="footer.html" class="footerinclude"></div>
 

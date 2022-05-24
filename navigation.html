@@ -41,20 +41,6 @@
                 <option>Prefer not to say</option>
             </select>
         </li>
-        <li>
-            <label id="minAge" for="minAge">Min Age</label>
-            <input name="minAge" id="minAge" type="text" placeholder="Enter Minimum Age">
-        </li>
-        <li>
-            <label id="maxAge" for="maxAge">Max Age</label>
-            <input name="maxAge" id="maxAge" type="text" placeholder="Enter Maximum Age">
-        </li>
-        <li>
-            <label id="Country" for="Country">Country</label>
-            <select name="country" id="country">
-                <option>India</option>
-            </select>
-        </li>
         <li >
             <label id="State" for="State">State</label>
             <select name="state" id="state">
@@ -62,21 +48,90 @@
             </select>
         </li>
         <li>
-            <label id="City" for="City">City</label>
-            <select  name="city" id="city">
-                
-            </select>
+            <label>District</label>
+            <input name="district" id="district" placeholder="District" type="text" />
         </li>
+
+
+        
         <li id="blockInputFeild">
             <label id="Block" for="Block">Block</label><br>
             <input name="block" id="block">
                 <!-- <option>Block 1</option> -->
             </input>
         </li>
+        <li>
+            <label>Village</label>
+            <input name="village" id="village" placeholder="Village" type="text" />
+        </li>
+        <li>
+            <lable>Pincode</lable>
+            <input id="pincode" name="pincode" placeholder="Pincode" type="number" />
+        </li>
+        <li>
+            <label>Jeevika Didi Name</label>
+            <input id="Jeevikadidi" name="jeevikadidi" placeholder="Jeevika Didi Name" type="text" />
+        </li>
+        <li>
+            <label>Year of birth</label>
+            <select id="yearOfBirth">
+                <option>dsd</option>
+            </select>
+        </li>
+        
+        
+        
+       
+        
+        <li>
+            <div class="navAge">
+                <!-- <li class="minAge">
+                    <label id="minAge" for="minAge">Min Age</label>
+                    <input name="minAge" id="minAge" type="text" placeholder="Enter Minimum Age">
+                </li>
+                <li>
+                    <label id="maxAge" for="maxAge">Max Age</label>
+                    <input name="maxAge" id="maxAge" type="text" placeholder="Enter Maximum Age">
+                </li> -->
+                
+                    <label>Age</label>
+                    <div class="ageFields">
+                        <input type="number" placeholder="Min Age" name="minAge" id="minAge">
+                        <input type="number" placeholder="Max Age" name="maxAge" id="maxAge">
+                    </div>
+                
+            </div>
+        </li>
+        <li>
+            <label>Year of matriculation</label>
+            <!-- <input name="YearOfMarticulation" id="yearofmarticulation" placeholder="Year of matriculation" type="number" /> -->
+            <select id="yearOfmatri">
+
+            </select>
+        </li>
+       
+        <!-- <li>
+            <label id="Country" for="Country">Country</label>
+            <select name="country" id="country">
+                <option>India</option>
+            </select>
+        </li> -->
+        
+        <!-- <li>
+            <label id="City" for="City">City</label>
+            <select  name="city" id="city">
+                
+            </select>
+        </li>
+        -->
+       
+        
+       
+        
         
     </ul>
     
     <div class="filterSubmitBtn">
-        <button name="submitbtn" type="submit" class="submitbtn" id="submitbtn" onclick=getInputFieldsData();>Show Data</button>
+        <button name="submitbtn" type="submit" class="submitbtn" id="submitbtn" onclick=getInputFieldsData();>Show</button>
     </div>
 </div>

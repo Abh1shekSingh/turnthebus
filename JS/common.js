@@ -55,7 +55,7 @@ var htmlstring = "";
           
         }
 
-// DATE PICKER
+// DATE PICKER FOR NAVIGATIOn
 $(document).ready(function(){
 
 
@@ -87,12 +87,10 @@ $(document).ready(function(){
 
 
      })
+// DATE PICKER FOR NAVIGATION ENDS
 
 
 // CITY COUNTRY DATA
-
-
-
 
 $(function(){
     
@@ -144,11 +142,211 @@ $(document).ready(function(){
      
 })
 
+//CITY COUNTRY DATA ENDS HERE
 
-// TRIAL
 
 
+// POPULATION YEAR OF BIRTH AND YEAR OF MATRICULATIOn
 
 document.getElementById('drpdownBtn').addEventListener('click', (e) => {
      document.getElementById('myDropdown').classList.toggle('show');
 })
+
+
+$(function(){
+     fetch("JS/year.json")
+     .then(res => res.json())
+     .then(data => {
+          $("#yearOfBirth").html(data.map((item) => {
+               return `
+                    <option>${item.year}</option>
+               `;
+          }))
+     })
+})
+
+$(function(){
+     fetch("JS/year.json")
+     .then(res => res.json())
+     .then(data => {
+          $("#yearOfmatri").html(data.map((item) => {
+               return `
+                    <option>${item.year}</option>
+               `;
+          }))
+     })
+})
+
+//ENDS HERE
+
+
+//DATE PICKER FOR REGISTER USER CHART
+$(document).ready(function(){
+
+
+     $(function() {
+
+          var start = moment().subtract(29, 'days');
+          var end = moment();
+          
+          function cb(start, end) {
+              $('#registeredUserDatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+          }
+          
+          $('#registeredUserDatePicker').daterangepicker({
+              startDate: start,
+              endDate: end,
+              ranges: {
+                 'Today': [moment(), moment()],
+                 'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                 'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                 'This Month': [moment().startOf('month'), moment().endOf('month')],
+                 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+              }
+          }, cb);
+          
+          cb(start, end);
+          
+          });
+
+})
+
+//REGITER USER DATE PICKER ENDS HERE
+
+
+//COURSE PIPELINE CHART DATE PICKER
+
+$(document).ready(function(){
+
+
+     $(function() {
+
+          var start = moment().subtract(29, 'days');
+          var end = moment();
+          
+          function cb(start, end) {
+              $('#coursePipeline span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+          }
+          
+          $('#coursePipeline').daterangepicker({
+              startDate: start,
+              endDate: end,
+              ranges: {
+                 'Today': [moment(), moment()],
+                 'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                 'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                 'This Month': [moment().startOf('month'), moment().endOf('month')],
+                 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+              }
+          }, cb);
+          
+          cb(start, end);
+          
+          });
+
+})
+
+
+// Monthly Active User Date Picker here
+$(document).ready(function(){
+
+
+     $(function() {
+
+          var start = moment().subtract(29, 'days');
+          var end = moment();
+          
+          function cb(start, end) {
+              $('#monthlyuserActiveDatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+          }
+          
+          $('#monthlyuserActiveDatePicker').daterangepicker({
+              startDate: start,
+              endDate: end,
+              ranges: {
+                 'Today': [moment(), moment()],
+                 'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                 'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                 'This Month': [moment().startOf('month'), moment().endOf('month')],
+                 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+              }
+          }, cb);
+          
+          cb(start, end);
+          
+          });
+
+})
+// Monthly User date picker ends here
+
+// Quiz Date Picker
+$(document).ready(function(){
+
+
+     $(function() {
+
+          var start = moment().subtract(29, 'days');
+          var end = moment();
+          
+          function cb(start, end) {
+              $('#quizDatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+          }
+          
+          $('#quizDatePicker').daterangepicker({
+              startDate: start,
+              endDate: end,
+              ranges: {
+                 'Today': [moment(), moment()],
+                 'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                 'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                 'This Month': [moment().startOf('month'), moment().endOf('month')],
+                 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+              }
+          }, cb);
+          
+          cb(start, end);
+          
+          });
+
+})
+//Quiz Date Picker Ends
+
+//Cards Together Date Picker
+
+$(document).ready(function(){
+
+
+     $(function() {
+
+          var start = moment().subtract(29, 'days');
+          var end = moment();
+          
+          function cb(start, end) {
+              $('#CardsDatePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+          }
+          
+          $('#CardsDatePicker').daterangepicker({
+              startDate: start,
+              endDate: end,
+              ranges: {
+                 'Today': [moment(), moment()],
+                 'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                 'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                 'This Month': [moment().startOf('month'), moment().endOf('month')],
+                 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+              }
+          }, cb);
+          
+          cb(start, end);
+          
+          });
+
+})
+
+//Cards DatePicker Ends
+

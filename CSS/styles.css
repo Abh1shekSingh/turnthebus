@@ -33,6 +33,25 @@ body{
     align-items: center;
 
 }
+.navAge li{
+    display:  flex;
+    flex-direction: column;
+}
+
+.navAge input{
+    width: 100%;
+}
+.navAge .ageFields{
+    display: flex;
+    gap: 1em;
+}
+.radioOption {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: .5em;
+}
 
 .nav__link{
     display: flex;
@@ -87,6 +106,7 @@ body{
 .header {
     background-color: #fff;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    border-bottom: 1px solid #3A438A;
     position: fixed;
     width: 100%;
     z-index: 3;
@@ -166,7 +186,16 @@ body{
   .header .menu-icon .navicon:after {
     top: -5px;
   }
+  .toalignleft{
+      position: absolute;
+      left: 20em;
+  }
+  .alsoaligntleft{
+      position: absolute;
+      left: 30em;
+  }
   
+
   /* menu btn */
   
   .header .menu-btn {
@@ -411,6 +440,18 @@ li{
     color: grey;
 }
 
+.cardsWrapper{
+    background-color: rgba(244, 237, 237, 0.8);
+    margin: 0 .5em;
+}
+.cardsDatePickerArea{
+    margin-left: auto;
+    margin-right: 0;
+    padding: 1em 1em 0 1em;
+    width: 25%;
+}
+
+
 .charts{
     position: relative;
     width: 100%;
@@ -418,6 +459,13 @@ li{
     display: grid;
     grid-template-columns:2fr 1fr;
     
+}
+.Quizcharts{
+    position: relative;
+    width: 100%;
+    padding:10px ;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .charts .middleLeft{
@@ -442,7 +490,7 @@ li{
     position: relative;
     padding: 1em;
     /* width: 785px; */
-    border-radius: 5px;
+    /* border-radius: 5px; */
     min-height: 400px;
     background-color: #fdfdfd;
     /* border: 2px solid #D8D8D8; */
@@ -455,15 +503,16 @@ li{
     width: 100%;
     height: 60vh;
 }
+#activeUser{
+    position: relative;
+    width: 100%;
+    height: 67vh;
+}
 
 #FunnelChart,#DoughnutChart{
     position: relative;
     width: 100%;
     height: 64.5vh;
-}
-
-#DoughnutChart{
-    transform: scale(1.05);
 }
 
 .activities{
@@ -479,11 +528,47 @@ li{
     position: relative;
     padding: 2em 2em;
     height: 15em;
-    border-radius: 5px;
     /* border: 2px solid #D8D8D8; */
     box-shadow: 0 0 50px #cccccccc;
 }
-
+.QuizCompletionArea{
+    
+    border-radius: 5px;
+    box-shadow: 0 0 50px #cccccccc;
+}
+.funnelChartDatePicker{
+    width: 50%;
+}
+.activeUserDatePicker{
+    padding: 1em 0 0 1em;
+    width: 40%;
+}
+.quizCompletedDatePicker{
+    padding: 1em;
+    width: 40%;
+}
+.doughnutChartDatePicker{
+    width: 50%;
+}
+.QuizCompletionArea{
+    background-color: white;
+}
+.userActiveData{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 50px #cccccccc;
+}
+@media only screen and (max-width:1000px){
+    .cardsDatePickerArea{
+        width: 80%;
+    }
+    .activeUserDatePicker{
+        width: 70%;
+    }
+    .quizCompletedDatePicker{
+        width: 80%;
+    }
+}
 .activities .quizCompleted{
     position: relative;
     background-color: #fdfdfd;
@@ -509,7 +594,7 @@ li{
     background-color: #fdfdfd;
     /* border: 2px solid #D8D8D8; */
     box-shadow: 0 0 50px #cccccccc;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .middleRight .doughnutChart{
@@ -519,9 +604,8 @@ li{
     background-color: #fdfdfd;
     /* border: 2px solid #D8D8D8; */
     box-shadow: 0 0 50px #cccccccc;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
-
 @media only screen and (max-width:768px){
     .middleRight{
         width: 20px;
@@ -543,6 +627,12 @@ li{
     .table{
         width:100% ;
         padding: 0 0em ;
+    }
+    .toalignleft{
+        position:unset;
+    }
+    .alsoaligntleft{
+        position: unset;
     }
     
 
